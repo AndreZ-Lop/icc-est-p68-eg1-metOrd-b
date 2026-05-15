@@ -4,10 +4,20 @@ import models.Movie;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("=== Evaluación: Ordenamiento de Películas por Título ===\n");
+        MovieController control = new MovieController();
         // imirpimir la lista de películas sin ordenar
         // ordenar la lista de películas por título utilizando el método sortByTitle del
         // MovieController
         // imprimir la lista de películas ordenada
+        Movie [] movies =App.generateMoviesList();
+        System.out.println("=== ARREGLO ORIGINAL ===");
+        MovieController.mostrarLista(movies);
+        System.out.println("=== ARREGLO ORDENADO ===");
+        control.sortByTitle(movies);
+        MovieController.mostrarLista(movies);
+
+        
+
 
     }
 
